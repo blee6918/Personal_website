@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-pill">
+            <button class="nav-link active" onclick="showPage('home')">Home</button>
+            <button class="nav-link" onclick="showPage('about')">About</button>
+            <button class="nav-link" onclick="showPage('work')">Work</button>
+            <button class="nav-link" onclick="showPage('contact')">Contact</button>
+        </div>
+    </nav>
+
+    <main id="main-container">
+
+        <section id="home" class="page-section active">
+            <div class="bento-grid">
+
+                <div class="card intro-card">
+                    <h1>Brian (Minsoo) Lee</h1>
+
+                    <div class="manifesto">
+                        <p>4th year Data Science student at Simon Fraser University</p>
+                        <p>Passionate about Data Science and Machine Learning</p>
+                        <p>Data Science is not just about numbers and equations, it's about making sense of the world.
+                        </p>
+                        <p>I see data science as the intersection of curiosity, engineering, and impact. For me, it is
+                            not just about building models, but about understanding the problem,
+                            questioning assumptions, and turning complex data into decisions that matter.</p>
+                        <p>My goal is to use data science to make a positive impact on society.</p>
+                    </div>
+                </div>
+
+                <div class="right-stack">
+
+                    <div class="card widget-card stack-card">
+                        <div class="card-label">MY STACK</div>
+                        <div class="stack-icons">
+                            <a href="https://www.python.org/" target="_blank" class="stack-item"
+                                data-tooltip="Python"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                    alt="Python"></a>
+                            <a href="https://www.r-project.org/" target="_blank" class="stack-item"
+                                data-tooltip="R Stats"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/r/r-original.svg" alt="R">
+                            </a>
+                            <a href="https://pandas.pydata.org/" target="_blank" class="stack-item"
+                                data-tooltip="Pandas"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg"
+                                    alt="Pandas"></a>
+                            <a href="https://www.tensorflow.org/" target="_blank" class="stack-item"
+                                data-tooltip="TensorFlow"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                                    alt="TF"></a>
+                            <a href="https://git-scm.com/" target="_blank" class="stack-item" data-tooltip="Git"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                    alt="Git"></a>
+                            <a href="https://python.langchain.com/" target="_blank" class="stack-item"
+                                data-tooltip="Langchain"><img
+                                    src="https://avatars.githubusercontent.com/u/126733545?v=4" alt="Langchain"></a>
+                            <a href="https://www.microsoft.com/en-us/sql-server/" target="_blank" class="stack-item"
+                                data-tooltip="SQL"><img
+                                    src="https://www.svgrepo.com/show/303229/microsoft-sql-server-logo.svg" alt="SQL">
+                            </a>
+                            <a href="https://www.mongodb.com/" target="_blank" class="stack-item"
+                                data-tooltip="MongoDB"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                    alt="MongoDB"></a>
+                            <a href="https://spark.apache.org/docs/latest/api/python/" target="_blank"
+                                class="stack-item" data-tooltip="pySpark"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachespark/apachespark-original.svg"
+                                    alt="pySpark"></a>
+                            <a href="https://pytorch.org/" target="_blank" class="stack-item"
+                                data-tooltip="pyTorch"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg"
+                                    alt="pyTorch"></a>
+                        </div>
+                    </div>
+
+                    <div class="card gallery-card">
+                        <img src="" class="gallery-bg" id="gallery-bg" alt="Gallery Background">
+
+                        <div class="glass-dock">
+                            <div class="dock-item active" onclick="changeGalleryImage(0)" id="dock-item-0">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M10 3H3v7h7V3zm11 0h-7v7h7V3zm0 11h-7v7h7v-7zm-11 0H3v7h7v-7z" />
+                                </svg>
+                            </div>
+
+                            <div class="dock-item" onclick="changeGalleryImage(1)" id="dock-item-1">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 20l-5.447 2.724A1 1 0 012 21.832V4.168a1 1 0 011.382-.924L9 6l6-2.853 5.447-2.724A1 1 0 0122 1.332v17.668a1 1 0 01-1.382.924L15 17l-6 2.853zM9 6v14m6-14v14" />
+                                </svg>
+                            </div>
+
+                            <div class="dock-item" onclick="changeGalleryImage(2)" id="dock-item-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                                </svg>
+                            </div>
+
+                            <div class="dock-item" onclick="changeGalleryImage(3)" id="dock-item-3">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path
+                                        d="M14.7 13.5c-1.1 -2 -1.441 -2.5 -2.7 -2.5c-1.259 0 -1.736 .755 -2.836 2.747c-.942 1.703 -2.846 1.845 -3.321 3.291c-.097 .265 -.145 .677 -.143 .962c0 1.176 .787 2 1.8 2c1.259 0 3 -1 4.5 -1s3.241 1 4.5 1c1.013 0 1.8 -.823 1.8 -2c0 -.285 -.049 -.697 -.146 -.962c-.475 -1.451 -2.512 -1.835 -3.454 -3.538z" />
+                                    <path
+                                        d="M20.188 8.082a1.039 1.039 0 0 0 -.406 -.082h-.015c-.735 .012 -1.56 .75 -1.993 1.866c-.519 1.335 -.28 2.7 .538 3.052c.129 .055 .267 .082 .406 .082c.739 0 1.575 -.742 2.011 -1.866c.516 -1.335 .273 -2.7 -.54 -3.052z" />
+                                    <path
+                                        d="M9.474 9c.055 0 .109 0 .163 -.011c.944 -.128 1.533 -1.346 1.32 -2.722c-.203 -1.297 -1.047 -2.267 -1.932 -2.267c-.055 0 -.109 0 -.163 .011c-.944 .128 -1.533 1.346 -1.32 2.722c.204 1.293 1.048 2.267 1.933 2.267z" />
+                                    <path
+                                        d="M16.456 6.733c.214 -1.376 -.375 -2.594 -1.32 -2.722a1.164 1.164 0 0 0 -.162 -.011c-.885 0 -1.728 .97 -1.93 2.267c-.214 1.376 .375 2.594 1.32 2.722c.054 .007 .108 .011 .162 .011c.885 0 1.73 -.974 1.93 -2.267z" />
+                                    <path
+                                        d="M5.69 12.918c.816 -.352 1.054 -1.719 .536 -3.052c-.436 -1.124 -1.271 -1.866 -2.009 -1.866c-.14 0 -.277 .027 -.407 .082c-.816 .352 -1.054 1.719 -.536 3.052c.436 1.124 1.271 1.866 2.009 1.866c.14 0 .277 -.027 .407 -.082z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="page-section" style="display: none;">
+            <div class="about-container">
+                <div class="profile-section">
+                    <img src="./photos/headshot/headshot.jpeg" alt="Brian (Minsoo) Lee" class="profile-large">
+                </div>
+                <div class="about-text">
+                    <h1>Hi, I'm Brian.</h1>
+                    <p>
+                        I’m a fourth-year Data Science student at Simon Fraser University with a strong interest in
+                        building practical, data-driven systems and applying machine learning to real-world problems.
+                    </p>
+                    <p>
+                        When I’m not coding or analyzing data, I enjoy staying active through sports like golfing in the
+                        summer and snowboarding in the winter.
+                        I also love playing video games, trying all kinds of food,
+                        and just going on walks or drives listening to all genres of music.
+                    </p>
+
+                    <h2>What I’m Interested In</h2>
+                    <ul>
+                        <li>Applied machine learning and AI systems</li>
+                        <li>Building reliable data pipelines and production models</li>
+                        <li>Agentic AI and autonomous systems</li>
+                    </ul>
+
+                    <h2>Beyond Work</h2>
+                    <p>
+                        Outside of data science, I enjoy staying active and exploring different interests that keep me
+                        balanced.
+                    </p>
+                    <ul>
+                        <li>⛳ <strong>Active sports</strong>: Golfing in the summer and snowboarding in the winter.</li>
+                        <li>🎮 <strong>Gaming</strong>: Enjoying immersive games and interactive experiences.</li>
+                        <li>🍜 <strong>Food & exploration</strong>: Trying all kinds of food and discovering new places.
+                        </li>
+                        <li>🎧 <strong>Music & downtime</strong>: Going on walks or drives while listening to all genres
+                            of music.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="page-section" style="display: none;">
+            <div class="work-container">
+                <!-- WORK EXPERIENCE -->
+                <h1 class="section-title">Work Experience</h1>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h3>Machine Learning Engineer</h3>
+                            <span class="exp-date">July 2023 - Current</span>
+                        </div>
+                        <h4 class="company">M2M Tech</h4>
+                        <p>
+                            At M2M Tech, I began as a Data Analyst Intern before transitioning into a Machine Learning
+                            Engineer. I worked on integrating large language models into applications using LangChain
+                            and LangGraph, and built ML components for recommender systems and automation using large
+                            datasets.
+                        </p>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="exp-header">
+                            <h3>Software Developer Intern</h3>
+                            <span class="exp-date">Sept 2020 - Jan 2021</span>
+                        </div>
+                        <h4 class="company">Remotrack Technologies</h4>
+                        <p>
+                            I contributed to full-stack development using Node.js, Flutter, and MongoDB, including
+                            building an automated student sign-in mobile app and collaborating on system design and
+                            problem solving.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROJECTS -->
+                <h1 class="section-title">Projects</h1>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <h3>AI Video Detector</h3>
+                        <p>With surging AI content, it is important to be able to detect AI-generated content. Built a
+                            video detector using OpenCV and YOLOv5.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">OpenCV</span>
+                            <span class="tag">YOLOv5</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>TCG (Trading Card Game) Price Predictor</h3>
+                        <p>Machine learning model to predict TCG card prices using sentiment analysis of news
+                            headlines.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">Scikit-learn</span>
+                            <span class="tag">NLP</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Personal Website</h3>
+                        <p>The site you're looking at right now! Built with HTML, CSS, and vanilla JavaScript.</p>
+                        <div class="tags">
+                            <span class="tag">HTML/CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="page-section" style="display: none;">
+            <div class="chat-wrapper">
+                <div class="chat-card">
+                    <div class="chat-header">
+                        <div class="avatar">
+                            <img src="./photos/headshot/headshot.jpeg" alt="Brian">
+                            <div class="status-dot"></div>
+                        </div>
+                        <div class="header-info">
+                            <h3>Brian's Assistant</h3>
+                            <span class="status-text">Online</span>
+                        </div>
+                    </div>
+
+                    <div class="chat-messages" id="chat-messages">
+                        <!-- Messages will appear here -->
+                    </div>
+
+                    <div class="chat-input-area" id="chat-options">
+                        <!-- Options will appear here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
